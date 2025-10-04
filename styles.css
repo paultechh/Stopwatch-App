@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #dc2626;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.clear-button {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.3s ease;
+  background-color: #dc2626;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.clear-button:hover {
+  opacity: 0.8;
+}
+
+.clear-button:active {
+  opacity: 0.6;
+}
+
+.timer-display {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  min-width: 300px;
+  text-align: center;
+}
+
+.start-stop-button {
+  background-color: #fbbf24;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  min-width: 150px;
+  user-select: none;
+}
+
+.start-stop-button:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.start-stop-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .timer-display {
+    font-size: 3rem;
+    min-width: 250px;
+  }
+
+  .clear-button {
+    font-size: 1.2rem;
+  }
+
+  .start-stop-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    min-width: 120px;
+  }
+
+  .stopwatch-container {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-display {
+    font-size: 2.5rem;
+    min-width: 200px;
+  }
+
+  .clear-button {
+    font-size: 1rem;
+  }
+
+  .start-stop-button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    min-width: 100px;
+  }
+}
